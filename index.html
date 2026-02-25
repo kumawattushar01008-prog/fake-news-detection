@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Detection</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            font-family: Arial;
+            text-align: center;
+            color: white;
+            padding-top: 50px;
+        }
+
+        .container {
+            background: white;
+            color: black;
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #243b55;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>📰 Fake News Detection App</h2>
+
+        <form method="POST">
+            <textarea name="news" rows="6"
+            placeholder="Enter news here"></textarea><br><br>
+
+            <button type="submit">Check News</button>
+            <button type="submit" name="live">Check Live News</button>
+        </form>
+
+        <h3>{{ prediction }}</h3>
+        <p><b>Model Accuracy:</b> {{ accuracy }}%</p>
+
+        <br>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
